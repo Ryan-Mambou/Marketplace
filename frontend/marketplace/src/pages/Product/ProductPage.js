@@ -75,8 +75,8 @@ export default function ProductPage() {
        <div className={styles.nestedInfo}><FaMoneyBillAlt className={styles.icons}/><span style={{marginLeft: '15px'}}>Earn </span></div>
      </div>
      </div>
-     {showModal && <ModifyModal closeModal={() => {setShowModal(false)}}/>}
-     {showDeleteModal && <DeleteModal closeModal={() => {setShowDeleteModal(false)}}/>}
+     {showModal && <ModifyModal closeModal={() => {setShowModal(false)}} productId={product._id} getProduct={getProduct} price={product.price} description={product.description} name={product.name}/>}
+     {showDeleteModal && <DeleteModal closeModal={() => {setShowDeleteModal(false)}} productId={product._id}/>}
      <Footer />
     </div>
   )

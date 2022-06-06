@@ -58,7 +58,10 @@ export default function Modal({closeModal}) {
         product.append('category', selectedValue);
 
         axios.post('http://localhost:3000/api/products', product)
-        .then((res) => console.log(res))
+        .then((res) => {
+            console.log(res)
+            closeModal()
+        })
         .catch(error => console.log(error))
     }
 
