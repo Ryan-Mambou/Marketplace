@@ -6,7 +6,7 @@ import profile from '../../assets/images/air jordan 1.PNG';
 import Comment from './Components/Comment';
 import Modal from '../../common/Modal';
 import { FaCommentSlash, FaRegEdit } from "react-icons/fa";
-import { MdOutlineAddCircle } from "react-icons/md";
+import { MdOutlineAddCircle, MdLogout } from "react-icons/md";
 import { TbMessages } from "react-icons/tb";
 import { IoSendSharp } from "react-icons/io5";
 import { useState } from 'react';

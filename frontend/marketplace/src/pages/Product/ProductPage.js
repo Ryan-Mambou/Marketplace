@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MdAddCircle, MdVisibility, MdSell } from "react-icons/md";
+import { MdAddCircle, MdVisibility, MdSell, MdLogout} from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import ModifyModal from './Components/ModifyModal';
 import DeleteModal from './Components/DeleteModal';
@@ -39,6 +39,16 @@ export default function ProductPage() {
   return (
     <div >
      <Header />
+     <div className={styles.nav}>
+            <span className={styles.homeText} onClick={(e) => {
+                e.preventDefault()
+                navigate(`/products`)
+            }}>Home</span>
+            <span className={styles.logOut} onClick={(e) => {
+                e.preventDefault()
+                navigate(`/login`)
+            }}><MdLogout />LogOut</span>
+        </div>
      <div style={{display: 'flex', height:'62vh', alignItems: 'center', justifyContent: 'space-between'}}>
      <div className={styles.product}>
          <div >

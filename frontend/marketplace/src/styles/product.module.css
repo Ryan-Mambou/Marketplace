@@ -1,4 +1,31 @@
 /**For Product Component **/
+.nav{
+    padding: 5px;
+    background-color: #F5F5F5;
+    text-align: center;
+    color: #666666;
+}
+
+.homeText{
+    text-align: center;
+    cursor: pointer;
+}
+
+.homeText:hover{
+    color: black;
+}
+
+.logOut{
+    float: right;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logOut:hover{
+    color: black;
+}
+
 .box {
     display: flex;
     flex-direction: column;
