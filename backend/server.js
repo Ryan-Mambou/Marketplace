@@ -1,5 +1,6 @@
 const http = require('http');
 const app = require('./app');
+const { Server } = require('socket.io'); 
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
@@ -36,6 +37,12 @@ const errorHandler = error => {
 };
 
 const server = http.createServer(app);
+
+const io = new Server(server, {
+  cors: {
+    origin: 'http://localhost:4000'
+  },
+});
 
 server.on('error', errorHandler);
 server.on('listening', () => {

@@ -16,11 +16,12 @@ import DeleteModal from './Components/DeleteModal';
 export default function ProductPage() {
   const {id} = useParams();
   const [product, setProduct] = useState({});
-  console.log(product)
   const navigate = useNavigate();
   const [user, setUser] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  console.log(user)
+  console.log(product)
 
   useEffect(() => {
     getProduct()
@@ -30,14 +31,10 @@ export default function ProductPage() {
     fetch(`http://localhost:3000/api/products/${id}`)
     .then(response => response.json())
     .then(product => {
-      console.log(product)
       setProduct(product)
       setUser(product.userId)
     })
   }
-
-  console.log(product.userId)
-  //console.log(JSON.parse(localStorage.getItem('userInfo')).userId == product.userId['_id'])
 
   return (
     <div >

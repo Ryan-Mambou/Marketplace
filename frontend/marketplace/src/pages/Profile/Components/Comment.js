@@ -1,26 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
 import pic from '../../../assets/images/air jordan 1.PNG';
-import styles from '../../../styles/comment.module.css'
+import styles from '../../../styles/comment.module.css';
+import { useParams } from 'react-router-dom';
 
-export default function Comment() {
-  const [comment, setComment] = useState();
-
-  const handleChange = (event) => {
-    setComment(event.target.value);
-  }
+export default function Comment(content, author) {
+  const { id } = useParams();
+  //console.log(author)
+  //console.log(content)
 
   return (
     <div className={styles.comments}>
         <div className={styles.comment}>
             <img className={styles.img} src={pic} alt="profile"/>
             <div className={styles.userComment}>
-                <span style={{padding: '10px', fontWeight: '700'}}>Username</span>
-                <span style={{padding: '10px'}}>Comment</span>
+                <span style={{padding: '10px', fontWeight: '700'}}>{content.author}</span>
+                <span style={{padding: '10px'}}>{content.content}</span>
             </div>
         </div>
-        <label htmlFor='comment'>Write a review about user</label>
-        <input placeholder='Review....' onChange={handleChange} value={comment}/>
+        
     </div>
   )
 }

@@ -40,6 +40,7 @@ exports.getAllProducts = (req, res, next)  => {
     .catch(error => res.status(500).json({error}))
 }
 
+
 exports.getProduct = (req, res, next)  => {
     Product.findOne({_id: req.params.id})
     .populate('userId')

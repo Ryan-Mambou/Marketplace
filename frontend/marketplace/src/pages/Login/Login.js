@@ -34,8 +34,6 @@ export default function Login() {
         .then(data => {
             console.log(data);
             console.log(data.hasOwnProperty('token'));
-            //setAccessToken(data.token);
-            //console.log(getAccessToken())
             if (data.hasOwnProperty('token')){
              navigate(`/products`);
             localStorage.setItem('userInfo', JSON.stringify(data))
@@ -44,7 +42,6 @@ export default function Login() {
         .catch(error => console.log(error))
 }
 
-//console.log(localStorage.getItem('userInfo'))
 
 
   return (

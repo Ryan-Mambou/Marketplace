@@ -7,6 +7,8 @@ const username = process.env.USER;
 const password = process.env.PASSWORD;
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
+const commentRoutes = require('./routes/comment');
+const categoryRoutes = require('./routes/category');
 
 mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.mbxky.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   { useNewUrlParser: true,
@@ -27,9 +29,13 @@ app.use((req, res, next) => {
 
 app.use(cors());
 
+
+
+
 app.use('/api/auth', userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/comments', commentRoutes);
+app.use('/api/category', categoryRoutes);
 app.use('/images', express.static(path.join(__dirname, 'images')));
-
 
 module.exports = app;

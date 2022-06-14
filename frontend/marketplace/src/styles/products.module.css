@@ -19,8 +19,9 @@
     /**display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;*/
-    width: 65%;
-    margin: auto auto;
-    border: solid 1px #6d6868;
+    width: 85%;
+    width: clamp(85%, 600px, 100%);
+    margin: 0px auto 15px auto;
+    
    
 }

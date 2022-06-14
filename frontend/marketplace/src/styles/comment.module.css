@@ -15,7 +15,7 @@
 
 .comment{
     display: flex;
-    width: 65px;
+    width: 100%;
 }
 
 label{
@@ -28,4 +28,5 @@ label{
     flex-direction: column;
     background-color: #7A7A7A;
     border-radius: 10px;
+    padding: 1px;
 }

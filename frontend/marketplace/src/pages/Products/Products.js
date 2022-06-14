@@ -24,7 +24,7 @@ export default function Products() {
         <Header />
         <div className={styles.middle}>
             <div className={styles.products}>
-                {products.map((product,key) => 
+                {products.map((product) => 
                   (<Product key={product.userId._id} imageUrl={product.imageUrl} price={product.price} name={product.name} product_id={product._id} />)
                 )}
             </div>

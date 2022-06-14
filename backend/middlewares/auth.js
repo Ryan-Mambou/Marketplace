@@ -6,6 +6,7 @@ module.exports = (req, res, next) => {
     const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET')
     const userId = decodedToken.userId;
     req.auth = {userId};
+    console.log(req.body.userId)
     if (req.body.userId && req.body.userId != userId){
         res.status(403).json({error: 'Unauthorized request!'})
     }
