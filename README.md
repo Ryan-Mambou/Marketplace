@@ -6,7 +6,7 @@
 
 #### ⚡To launch the frontend 
 
-* cd frontend/groupamania
+* cd frontend/marketplace
 * npm start
 
 #### ⚡To launch backend
